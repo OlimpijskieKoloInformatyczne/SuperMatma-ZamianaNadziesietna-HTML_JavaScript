@@ -21,15 +21,26 @@
 
 <div style="margin-top: 15px;">
 <label>Liczba dziesiętna:</label>
-<input id="pole_liczba_dziesietna">
+<input id="pole_liczba_dziesietna" readonly="readonly">
 </div>
 
 <script>
  function ZamienNaDziesietna(zdarzenie) {
-    let liczba_dwojkowa; 
+    let liczba_dwojkowa, liczba_dziesietna;
+    let cyfra_dwojkowa, potega_dwojki; 
 
     liczba_dwojkowa = document.getElementById("pole_liczba_dwojkowa").value;
-    document.getElementById("pole_liczba_dziesietna").value = liczba_dwojkowa;
+    liczba_dziesietna = 0;
+    potega_dwojki = 1;
+
+    while (liczba_dwojkowa > 0) {
+        cyfra_dwojkowa = liczba_dwojkowa%10;
+        liczba_dziesietna = liczba_dziesietna + cyfra_dwojkowa*potega_dwojki;
+        liczba_dwojkowa = (liczba_dwojkowa-cyfra_dwojkowa)/10;
+        potega_dwojki = potega_dwojki*2;
+    }
+
+    document.getElementById("pole_liczba_dziesietna").value = liczba_dziesietna;
  }    
 </script>
 
