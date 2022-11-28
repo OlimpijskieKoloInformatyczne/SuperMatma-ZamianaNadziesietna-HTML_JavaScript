@@ -14,15 +14,21 @@
 </div>
 
 <div style="margin-top: 15px;">
-<button>
+<button onclick="ZamienNaDziesietna()">
    Zamień na dziesiętną 
 </button>
 </div>
 
 <div style="margin-top: 15px;">
 <label>Liczba dziesiętna:</label>
-<input>
+<input id="pole_liczba_dziesietna">
 </div>
+
+<script>
+ function ZamienNaDziesietna(zdarzenie) {
+    document.getElementById("pole_liczba_dziesietna").value = 5;
+ }    
+</script>
 
 </body>
 
