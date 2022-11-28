@@ -10,7 +10,7 @@
 
 <div style="margin-top: 30px;">
 <label>Liczba dwójkowa:</label>
-<input>
+<input id="pole_liczba_dwojkowa">
 </div>
 
 <div style="margin-top: 15px;">
@@ -26,7 +26,10 @@
 
 <script>
  function ZamienNaDziesietna(zdarzenie) {
-    document.getElementById("pole_liczba_dziesietna").value = 5;
+    let liczba_dwojkowa; 
+
+    liczba_dwojkowa = document.getElementById("pole_liczba_dwojkowa").value;
+    document.getElementById("pole_liczba_dziesietna").value = liczba_dwojkowa;
  }    
 </script>
 
